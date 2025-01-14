@@ -1,16 +1,16 @@
 <!-- Unit 5 Project
 Requirements
-[  ] <div> and <span>
-[  ] height: and width:
-[  ] margin: and padding: 
-[  ] Three Images
+[ yes ] <div> and <span>
+[ yes ] height: and width:
+[ yes ] margin: and padding: 
+[ yes ] Three Images
 
 Select ONE Additional Feature to Add  
 [ no ] Feature 1 - Flexbox
-[ no ] Feature 2 - Flip Card
-[ no ] Feature 3 - Navbar
+[ yes ] Feature 2 - Flip Card
+[ yes ] Feature 3 - Navbar
 [ no ] Feature 4 - Shaking Animation
-[ no ] Feature 5 - Gradient Background
+[ yes ] Feature 5 - Gradient Background
 [ no ] Feature 6 - Spotify Playlist
 -->
 
@@ -20,11 +20,31 @@ Select ONE Additional Feature to Add
     <title>Unit 5 Project</title>
     <meta charset="utf-8" />
     <style>
+      #city {
+        width: 70%;
+        height: 180px;
+        overflow-y: auto;
+        margin: 20px;
+        border: 5px solid blue;
+        padding: 5px;
+      }
+      body {
+        background-image: radial-gradient(tan, BurlyWood);
+      }
+      .heading {
+        color: white;
+        text-decoration: underline;
+        font-style: italic;
+      }
+
+      #intro {
+        background-color: rgb(188, 143, 143);
+      }
       ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
-        background-color: white;
+        background-color: none;
         overflow: hidden;
         position: fixed;
         top: 0;
@@ -36,7 +56,7 @@ Select ONE Additional Feature to Add
       li a {
         text-decoration: none;
         padding: 10px;
-        bancground-color: beige;
+        bancground-color: black;
         color: black;
       }
 
@@ -80,21 +100,37 @@ Select ONE Additional Feature to Add
       }
 
       .flip-card-back {
-        background-color: #2980b9;
+        background-color: #344e69;
         color: white;
         transform: rotateY(180deg);
       }
 
       .main {
-        background-color: white;
+        background-color: none;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
       }
+
+      .book-container {
+        background-color: none;
+        display: flex;
+        height: 300px;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .cities {
+        background-color: brown;
+        width: 200px;
+      }
     </style>
   </head>
   <body>
-    <h1>Current and Upcoming Events</h1>
+    <div id="intro">
+      <h1><span class="heading"> Current and Upcoming Events</span></h1>
+    </div>
+
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="news.html">News</a></li>
@@ -134,7 +170,7 @@ Select ONE Additional Feature to Add
             <img
               src="https://images.artnet.com/gallery-images/223/fe4aa615-876a-404c-b4ff-1da0af10e42b.jpg?x=550%40%211320xaD01NTAmdz0xMzIwJmY9Y292ZXImdD1s"
               alt="Avatar"
-              style="width: 300px; height: 300px"
+              style="width: 350px; height: 300px"
             />
           </div>
           <div class="flip-card-back">
@@ -156,15 +192,22 @@ Select ONE Additional Feature to Add
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <img
-              src="https://cdn.britannica.com/81/197981-050-076495E8/Ginevra-de-Benci-oil-panel-Leonardo-da.jpg"
+              src="https://boccaneragallery.com/wp-content/uploads/2024/01/PLANT-Deppea-splendens-MEX-N-copia.jpg"
               alt="Avatar"
               style="width: 300px; height: 300px"
             />
           </div>
           <div class="flip-card-back">
-            <h1>John Doe</h1>
-            <p>Architect& Engineer</p>
-            <p>We love that guy</p>
+            <h1>Debora Hirsch. Herbaria</h1>
+            <p>
+              LOCATION<br />
+              47 EAST 64TH STREET New York New York NY 10065 United States
+              Hutchinson Modern and Contemporary
+            </p>
+            <p>
+              DATES<br />
+              21 Nov 2024 – 8 Mar 2025
+            </p>
           </div>
         </div>
       </div>
@@ -173,15 +216,22 @@ Select ONE Additional Feature to Add
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Las_Meninas%2C_by_Diego_Vel%C3%A1zquez%2C_from_Prado_in_Google_Earth.jpg/1200px-Las_Meninas%2C_by_Diego_Vel%C3%A1zquez%2C_from_Prado_in_Google_Earth.jpg"
+              src="https://img.artrabbit.com/events/rachel-gregor-cruel-babes/images/ql8b55MGHymH/1920x960/exhibition00-landscape-2.webp"
               alt="Avatar"
-              style="width: 300px; height: 300px"
+              style="width: 350px; height: 300px"
             />
           </div>
           <div class="flip-card-back">
-            <h1>John Doe</h1>
-            <p>Architect& Engineer</p>
-            <p>We love that guy</p>
+            <h1>Rachel Gregor. Cruel Babes</h1>
+            <p>
+              LOCATION<br />
+              54 Ludlow Street New York New York 10002 United States Hashimoto
+              Contemporary NYC
+            </p>
+            <p>
+              DATES<br />
+              16 Nov 2024 – 7 Dec 2024
+            </p>
           </div>
         </div>
       </div>
@@ -190,18 +240,31 @@ Select ONE Additional Feature to Add
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <img
-              src="https://geniuses.club/public/storage/015/135/072/137/500_0_607edb5220365.jpg"
+              src="https://img.artrabbit.com/events/solid-gold/images/HuusbmKQevRf/960x960/Greek-Wreath-details-3rd-2nd-century-B-C-E-Gold.webp"
               alt="Avatar"
               style="width: 300px; height: 300px"
             />
           </div>
           <div class="flip-card-back">
-            <h1>John Doe</h1>
-            <p>Architect& Engineer</p>
-            <p>We love that guy</p>
+            <h1>Solid Gold</h1>
+            <p>
+              LOCATION<br />
+              200 Eastern Parkway New York New York NY 11238-6052 United States
+              Brooklyn Museum of Art
+            </p>
+            <p>
+              DATES<br />
+              16 Nov 2024 – 6 Jul 2025
+            </p>
           </div>
         </div>
       </div>
     </div>
+
+    <img
+      id="city"
+      src="https://www.travelingfoundlove.com/wp-content/uploads/2022/09/NYC-at-night-from-Top-of-the-Rocks.jpg"
+      alt="New York City"
+    />
   </body>
 </html>
